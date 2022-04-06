@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+ * {
+    font-family: 'Roboto',;
+
+ }
+
+
+/* adding background color to the body */
+.body {
+    background-color: #f1f7ed;
+    /* color: blue; */
+    height: 2000px;
+    color: #555;
+
+
+    
+}
+
+
+.bg-img {
+    background-image: url(./images/wp.jpg);
+    height: 100%;
+    width: 95%;
+    background-size:cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+    margin: 0 auto;
+    
+
+}
+
+
+.logo {
+    pointer-events: none;
+}
+
+
+
+/* setting the display to none for hu class and then displaying the class in javascript after clicking on button flag  */
+.hu {
+    display: none;
+}
+
+/* box shadow */
+.box-shadow {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* text-shadow */
+.text-shadow {
+    text-shadow: 2px 2px 5px #111;
+}
+
+
+/* button styling */
+.button {
+    width: 60px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    /* border-style: solid; */
+    /* border-color: antiquewhite; */
+    transition: 0.4s;
+}
+
+/* button on hover style */
+.button:hover {
+    transform: scale(0.95);
+}
+
+
+.scale {
+    transition: 0.4s;
+}
+
+.scale:hover {
+    transform: scale(0.95);
+    opacity: 95%;
+}
+
+
+/* adding images to the flags buttons */
+.roFlag {
+    background-image: url(./images/roFlag.jpeg);
+}
+
+.huFlag {
+    background-image: url(./images/huFlag.jpeg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+/* not active class for non selected flag */
+.notActive {
+    opacity: 70%;
+}
+
+
+
+/* active class for selected flag */
+.active {
+    opacity: 100%;
+}
+
+
+
+.sticky {
+    position:sticky;
+    top: 0;
+    /* background-color:rgba(255, 232, 124, 0.3); */
+    background-color: #FFFDD0;
+    height: 80px;
+
+}
+
+.navbar-brand {
+    margin-left: 5%;
+    margin-top: -1.7%;
+}
+
+.navbar-nav {
+    margin-right: 5%;
+    margin-top: -1.7%;
+}
+
+.navbar-toggler {
+    margin-top: -40px;
+}
+
+.events {
+    /* background-color: rgba(255, 232, 124, 0.3); */
+    /* background-color: rgba(255, 232, 124, 0.3); */
+    background-color: #FFFDD0;
+    height: 250px;
+}
+
+.rounded-corners {
+    border-radius: 20px;
+}
+
+
+
+
+.primary-wp {
+    background-image: url(./images/wp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+
+
+
+/* photo gallery */
+
+
+
+
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .row-gallery {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row-gallery ,
+  .row-gallery  > .column-gallery  {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column-gallery  {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rows */
+  .row-gallery :after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content-gallery  {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show-gallery  {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn-gallery  {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 1%;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn-gallery:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn-gallery.active-gallery  {
+    background-color: #555;
+     color: white;
+  }
+
+
+
+  /* pricing area */
+  .card {
+    border:none;
+    padding: 10px 50px;
+  }
+
+  
+  .card:hover {
+      
+      cursor: pointer;
+      transform: scale(0.99);
+      -webkit-transform: scale(0.99);
+      backface-visibility: hidden; 
+      will-change: transform;
+      box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+      transition: ease-in 0.4s;
+    }
+    
+
+    
+.card {
+    background-color: #333;
+}
+
+
+
+.photo-div1{
+
+    margin-top: 150px;
+    
+}
+
+
+.photo-div2{
+
+    margin-top: 50px ;
+    
+}
+
+
+
+.quote {
+    margin-top: 300px;
+}
+
+.pricing {
+    margin-top: 120px !important;
+}
+
+.text-pricing  {
+    margin-bottom: 30px !important;
+}
