@@ -7,6 +7,27 @@ const preturi = document.querySelector('.preturi');
 const echipa = document.querySelector('.echipa');
 const contact = document.querySelector('.contact');
 const evenimente = document.querySelector('.evenimente');
+const evenimente2 = document.querySelector('.evenimente2');
+const evenimente_context = document.querySelector('.evenimente-context');
+const galerie = document.querySelector('.galerie')
+const arata_toate = document.querySelector('.arata-toate')
+const baza_tenis = document.querySelector('.baza-tenis')
+const turnee = document.querySelector('.turnee')
+const tabere = document.querySelector('.tabere')
+const citat = document.querySelector('.citat')
+const preturi_informative = document.querySelector('.preturi-informative')
+const inchiriere_teren = document.querySelector('.inchiriere-teren')
+const fara_antrenor = document.querySelector('.fara-antrenor')
+const ora1 = document.querySelector('.ora1')
+const ora2 = document.querySelector('.ora2')
+const ora3 = document.querySelector('.ora3')
+const ora_individuala = document.querySelector('.ora-individuala')
+const cu_antrenor1 = document.querySelector('.cu-antrenor1')
+const cu_antrenor2 = document.querySelector('.cu-antrenor2')
+const cu_grupa = document.querySelector('.cu-grupa')
+const antrenori = document.querySelector('.antrenori')
+
+
 
 link.forEach(e => {
 e.addEventListener('click', () => {
@@ -20,6 +41,25 @@ e.addEventListener('click', () => {
 	preturi.textContent = data[attr].preturi;
 	echipa.textContent = data[attr].echipa;
 	contact.textContent = data[attr].contact;
+	evenimente2.textContent = data[attr].evenimente2;
+  evenimente_context.textContent = data[attr].evenimente_context;
+  galerie.textContent = data[attr].galerie;
+  arata_toate.textContent = data[attr].arata_toate;
+  baza_tenis.textContent = data[attr].baza_tenis;
+  turnee.textContent = data[attr].turnee;
+  tabere.textContent = data[attr].tabere;
+  citat.textContent = data[attr].citat;
+  preturi_informative.textContent = data[attr].preturi_informative;
+  inchiriere_teren.textContent = data[attr].inchiriere_teren;
+  fara_antrenor.textContent = data[attr].fara_antrenor;
+  ora1.textContent = data[attr].ora1;
+  ora2.textContent = data[attr].ora2;
+  ora3.textContent = data[attr].ora3;
+  ora_individuala.textContent = data[attr].ora_individuala;
+  cu_antrenor1.textContent = data[attr].cu_antrenor1;
+  cu_antrenor2.textContent = data[attr].cu_antrenor2;
+  cu_grupa.textContent = data[attr].cu_grupa;
+  antrenori.textContent = data[attr].antrenori;
 });
 });
 
@@ -33,7 +73,26 @@ let data = {
 	"evenimente": "Evenimente",
     "preturi": "Preturi",
     "echipa": "Echipa",
-    "contact": "Contact"
+    "contact": "Contact",
+    "evenimente2" : "Evenimente",
+    "evenimente_context" : 'Din pacate nu exista evenimente in aceasta perioada',
+    'galerie' : 'Galerie Foto',
+    'arata_toate' : 'Arata toate',
+    'baza_tenis' : 'Baza de tenis',
+    'turnee' : 'Turnee',
+    'tabere' : 'Tabere',
+    'citat' : 'Nu poti castiga toate meciurile, dar poti incerca !',
+    'preturi_informative' : 'Preturi Informative',
+    'inchiriere_teren' : 'Inchiriere teren',
+    'fara_antrenor' : 'Fara antrenor',
+    'ora1' : '/ora',
+    'ora2' : '/ora',
+    'ora3' : '/ora',
+    'ora_individuala' : 'Ora individuala',
+    'cu_antrenor1' : 'Cu antrenor',
+    'cu_antrenor2' : 'Cu antrenor',
+    'cu_grupa' : 'Ora cu grupa',
+    'antrenori' : 'Antrenori',
 	},
 
 
@@ -46,7 +105,30 @@ let data = {
 	"evenimente": "Események",
     "preturi": "Árak",
     "echipa": "Csapat",
-    "contact": "Kapcsolatba lépni"
+    "contact": "Kapcsolatba lépni",
+    "evenimente2" : "Események",
+    "evenimente_context": 'Sajnos ebben az időszakban nincs rendezvény',
+    'galerie' : 'Képgaléria',
+    'arata_toate' : 'Mutasd az összeset',
+    'baza_tenis' : 'Tenisz alap',
+    'turnee' : 'Versenyek',
+    'tabere' : 'Táborok',
+    'citat' : 'Nem lehet minden meccset megnyerni, de próbálkozni igen !',
+    'preturi_informative' : 'Tájékoztató árak',
+    'inchiriere_teren' : 'Kiadó földterület',
+    'fara_antrenor' : 'Nincs edző',
+    'ora1' : '/óra',
+    'ora2' : '/óra',
+    'ora3' : '/óra',
+    'ora_individuala' : 'Egyéni idő',
+    'cu_antrenor1' : 'Edzővel',
+    'cu_antrenor2' : 'Edzővel',
+    'cu_grupa' : 'Csoportos idő',
+    'antrenori' : 'Edzők',
+
+
+    
+
     },
     
 	
@@ -54,32 +136,34 @@ let data = {
 
 
 
+//navbar 
+document.addEventListener("DOMContentLoaded", function(){
 
-
-
-//navbar appear on scroll up
-
-// let lastScrollTop; // This Varibale will store the top position
-
-// navbar = document.querySelector('.nav-div'); // Get The NavBar
-
-// window.addEventListener('scroll',function(){
-//  //on every scroll this funtion will be called
+  el_autohide = document.querySelector('.autohide');
   
-//   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   //This line will get the location on scroll
-  
-//   if(scrollTop > lastScrollTop){ //if it will be greater than the previous
-//     navbar.style.top='-80px';
-//     //set the value to the negetive of height of navbar 
-//   }
-  
-//   else{
-//     navbar.style.top='0';
-//   }
-  
-//   lastScrollTop = scrollTop; //New Position Stored
-// });
+  // add padding-top to bady (if necessary)
+  navbar_height = document.querySelector('.navbar').offsetHeight;
+  document.body.style.paddingTop = navbar_height + 'px';
+
+  if(el_autohide){
+    var last_scroll_top = 0;
+    window.addEventListener('scroll', function() {
+          let scroll_top = window.scrollY;
+         if(scroll_top < last_scroll_top) {
+              el_autohide.classList.remove('scrolled-down');
+              el_autohide.classList.add('scrolled-up');
+          }
+          else {
+              el_autohide.classList.remove('scrolled-up');
+              el_autohide.classList.add('scrolled-down');
+          }
+          last_scroll_top = scroll_top;
+    }); 
+    // window.addEventListener
+  }
+  // if
+
+}); 
 
 
 
